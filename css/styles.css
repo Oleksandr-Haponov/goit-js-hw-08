@@ -1,64 +1,60 @@
-.gallery {
+body {
+    margin: 0;
+    font-family: sans-serif;
+    cursor: default;
+        padding: 24px 156px;
+        box-sizing: border-box;
+      }
+  
+  .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
     list-style: none;
     padding: 0;
-}
-
-.gallery__item {
+  }
+  
+  .gallery__item {
     position: relative;
-}
-
-/* Зображення в галереї */
-.gallery__image {
+  }
+  
+  .gallery__link {
+    display: block;
+  }
+  
+  .gallery__image {
     width: 360px;
     height: 200px;
     flex-shrink: 0;
+    object-fit: cover;
     transition: all 0.3s ease;
     cursor: pointer;
-}
-
-/* Збільшення зображення при наведенні */
-.gallery__image:hover {
+  }
+  
+  .gallery__image:hover {
     width: 376px;
     height: 208px;
     margin: -4px -8px;
-}
-
-/* Іконка "палець" */
-.gallery__icon {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 44px;
-    height: 44px;
-    pointer-events: none;
-    display: none;
-}
-
-.gallery__link:hover .gallery__icon {
-    display: block;
-    transition: all 0.3s ease;}
-
-/* Модальне вікно */
-.basicLightbox {
+  }
+  
+  .basicLightbox {
     background: #2E2F42CC;
     opacity: 0;
     transition: opacity 0.3s ease;
-}
-
-.basicLightbox--visible {
+  }
+  
+  .basicLightbox--visible {
     opacity: 1;
-}
-
-.modal__image {
+  }
+  
+  .modal__image {
     width: 1112px;
     height: 640px;
     flex-shrink: 0;
     margin: 28px 164px;
-}
+    display: block;
+  }
+  
