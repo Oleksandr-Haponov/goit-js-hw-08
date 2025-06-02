@@ -77,6 +77,7 @@ gallery.innerHTML = images
       data-source="${original}"
       alt="${description}"
     />
+    </a>
   </li>
 `
   )
