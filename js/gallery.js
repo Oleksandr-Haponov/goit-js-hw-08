@@ -84,8 +84,11 @@ gallery.innerHTML = images
   .join('');
 
 gallery.addEventListener('click', (event) => {
-  const img = event.target.closest('.gallery__image');
-  if (!img) return;
+  if (event.target.nodeName !== 'IMG') return;
+
+  event.preventDefault();
+  
+  const img = event.target;
 
   const instance = basicLightbox.create(`
     <img class="modal__image" src="${img.dataset.source}" alt="${img.alt}" />
